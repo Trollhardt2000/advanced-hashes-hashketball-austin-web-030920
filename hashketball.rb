@@ -277,7 +277,7 @@ def long_name_steals_a_ton?
    game_hash.each do |loc, team|
     team[:players].each do |player_stats|
       if player_stats[:player_name] == longest
-        return player_stats[:steals]
+        return player_stats[:steals].eql? most 
       end 
    end 
   
